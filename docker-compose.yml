@@ -1,0 +1,11 @@
+services:
+  pgvector:
+    image: 'pgvector/pgvector:pg18'
+    environment:
+      - 'POSTGRES_DB=demo'
+      - 'POSTGRES_PASSWORD=Nisarg@24680'
+      - 'POSTGRES_USER=postgres'
+    labels:
+      - "org.springframework.boot.service-connection=postgres"
+    ports:
+      - '5432'
